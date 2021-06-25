@@ -1,0 +1,26 @@
+<textarea id="txt" rows="5" cols="40" onkeyup="counter()" maxlength="160"></textarea>
+
+<div id="counter">
+	<div id="bar"></div>
+</div>
+
+<div id="counter_number"></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
+<script>
+function counter(){
+	var txt=jQuery('#txt').val();
+	var len=txt.length;
+	jQuery('#bar').css('width',len);
+	//var final_avaliable=160-len;
+	jQuery('#counter_number').html(len);
+}
+</script>
+<style>
+#counter{border:1px solid #000; height:30px; width:160px; margin-top:20px;}
+
+#bar{background-color:#33B8FF; height:30px; width:0px;}
+
+#counter_number{font-weight:bold;margin-top:5px;}
+</style>
